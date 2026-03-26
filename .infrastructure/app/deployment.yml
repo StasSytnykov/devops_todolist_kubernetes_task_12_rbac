@@ -17,6 +17,7 @@ spec:
       labels:
         app: todoapp
     spec:
+      # RBAC: pod identity for API access; bound Role (.infrastructure/security/rbac.yml) grants secrets list/get in todoapp.
       serviceAccountName: secrets-reader
       containers:
       - name: todoapp
